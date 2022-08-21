@@ -1,4 +1,9 @@
 // ===> 0-1 Triangle pattern.
+// 1 
+// 0 1 
+// 1 0 1 
+// 0 1 0 1 
+// 1 0 1 0 1 
 
 public class fifth_pattern {
     // ---> My method
