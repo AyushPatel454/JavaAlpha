@@ -1,3 +1,7 @@
+/*
+ * Question: 1: Check number is Odd or Even.
+ */
+
 public class b_OddEven {
     public static void oddOrEven(int n) {
         int bitMask = 1;
