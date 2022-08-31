@@ -1,3 +1,7 @@
+/*
+ * OOPS
+ */
+
 public class A_OOPS {
     public static void main(String[] args) {
         // creating object

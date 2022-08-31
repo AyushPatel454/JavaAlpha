@@ -1,3 +1,7 @@
+/*
+ * Hierachial Inheritance
+ */
+
 public class H_HierachialInheritance {
     public static void main(String[] args) {
         // Mammal object

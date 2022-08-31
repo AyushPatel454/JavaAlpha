@@ -1,3 +1,7 @@
+/*
+ * Interfaces
+ */
+
 public class M_Interface {
     public static void main(String[] args) {
         Queen q1 = new Queen();

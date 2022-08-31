@@ -1,5 +1,5 @@
 /*
- * Functioin Overriding.
+ * Functioin Overriding. (Run Time Polymorphism )
  * Parent & child classes both contain the same function with a different defination.
  */
 
