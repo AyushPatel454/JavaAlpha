@@ -1,0 +1,1 @@
+int marks[] = new int[3];
