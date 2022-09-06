@@ -1,3 +1,7 @@
+/*
+ * Merge Sort...
+ */
+
 public class A_MergeSort {
     // merge sort
     public static void mergeSort(int arr[],int si,int ei) {
@@ -63,7 +67,7 @@ public class A_MergeSort {
         int arr[] = {6,3,9,5,2,8};
         mergeSort(arr, 0, arr.length-1);
         printArr(arr);
-        
+
         int arr2[] = {6,3,9,5,2,8,-2};
         mergeSort(arr2, 0, arr2.length-1);
         printArr(arr2);

@@ -1,3 +1,7 @@
+/*
+ * Quick Sort...
+ */
+
 public class B_QuickSort {
     // QuickSort
     public static void quickSort(int arr[],int si,int ei) {
