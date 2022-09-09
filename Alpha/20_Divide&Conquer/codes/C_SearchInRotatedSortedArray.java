@@ -1,3 +1,14 @@
+/* (Important Question.)
+ * Question: (Medium level Question.)
+ * Search in Rotated Sorted Array...
+ *      Sorted, rotated array with distinct numbers (in ascending order). It is rotated
+ *      at a pivot point. Find the index of given element.
+ *      
+ *      Example:
+ *      {4,5,6,7,0,1,2} ---> Target: 0 ---> Output: 4
+ */
+
+
 public class C_SearchInRotatedSortedArray {
     public static int search(int arr[], int target, int si, int ei) {
         // base case
@@ -7,7 +18,7 @@ public class C_SearchInRotatedSortedArray {
         // kam
         int mid = si + (ei - si)/2;
 
-        // case FOND
+        // case FOUND
         if(arr[mid] == target) {
             return mid;
         }
