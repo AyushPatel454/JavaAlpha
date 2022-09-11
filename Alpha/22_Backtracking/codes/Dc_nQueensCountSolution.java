@@ -1,7 +1,7 @@
 /*
  * N-Queens Problem
  * 
- * print all safest solution of n-quees. (Queens can't attck to each other)
+ * print total number of count of safest solution. (Queens can't attck to each other)
  * 
  * Time Complexity: O(n!);
  *                          Queen no: 1     2       3       4 ... ... ... n
@@ -9,7 +9,7 @@
  *                                    n * (n-1) * (n-2) * (n-3) * ... * 1 = n!  
  */
 
-public class Db_nQueens {
+public class Dc_nQueensCountSolution {
     // is Safe ?
     public static boolean isSafe(char board[][],int row, int col) {
         // vertical-up
@@ -35,11 +35,15 @@ public class Db_nQueens {
         return true;
     }
 
+    // count variable
+    static int count = 0;
+
     // n-queen
     public static void nQueens(char board[][],int row) {
         // base case
         if(row == board.length) {
-            printBoard(board);
+            count++;
+            // printBoard(board);
             return;
         }
         // column loop
@@ -73,5 +77,7 @@ public class Db_nQueens {
         }
 
         nQueens(board, 0);
+
+        System.out.println("Total number of way's to find soultion = "+count);
     }
 }

@@ -1,7 +1,7 @@
 /*
  * N-Queens Problem
  * 
- * print all safest solution of n-quees. (Queens can't attck to each other)
+ * print total number of count of safest solution. (Queens can't attck to each other)
  * 
  * Time Complexity: O(n!);
  *                          Queen no: 1     2       3       4 ... ... ... n
@@ -9,7 +9,7 @@
  *                                    n * (n-1) * (n-2) * (n-3) * ... * 1 = n!  
  */
 
-public class Db_nQueens {
+public class Dd_nQueensOneSolution {
     // is Safe ?
     public static boolean isSafe(char board[][],int row, int col) {
         // vertical-up
@@ -35,21 +35,29 @@ public class Db_nQueens {
         return true;
     }
 
+    // count variable
+    static int count = 0;
+
     // n-queen
-    public static void nQueens(char board[][],int row) {
+    public static boolean nQueens(char board[][],int row) {
         // base case
         if(row == board.length) {
-            printBoard(board);
-            return;
+            count++;
+            // printBoard(board);
+            return true;
         }
         // column loop
         for (int j = 0; j < board.length; j++) {
             if( isSafe(board,row,j) ) {
                 board[row][j] = 'Q';
-                nQueens(board, row+1); // function call
+                if(nQueens(board, row+1)) {  // function call
+                    return true;
+                }
                 board[row][j] = 'x'; // backtracking step
             }
         }
+
+        return false; // no solution possible.
     }
 
     // print board
@@ -72,6 +80,14 @@ public class Db_nQueens {
             }
         }
 
-        nQueens(board, 0);
+        if(nQueens(board, 0)) {
+            System.out.println("Solution is Possible...");
+            printBoard(board);
+        }
+        else {
+            System.out.println("Solution is not possible...");
+        }
+
+        System.out.println("Total number of way's to find soultion = "+count);
     }
 }
