@@ -1,5 +1,8 @@
 /*
  * Size of linked list.
+ *      Inilize new STATIC SIZE variable.
+ *      If you add new node then ---> SIZE++
+ *      If you remove node then ---> SIZE--
  */
 
 

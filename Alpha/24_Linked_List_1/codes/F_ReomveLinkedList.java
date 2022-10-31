@@ -1,3 +1,8 @@
+/*
+ * Remove Node Frome Linked List.
+ * Remove First , Remove Last , Remove In-Between.
+ */
+
 public class F_ReomveLinkedList {
     // class
     public static class Node {

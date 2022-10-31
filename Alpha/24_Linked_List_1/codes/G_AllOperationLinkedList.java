@@ -1,3 +1,8 @@
+/*
+ * Linked list All opertaion
+ * Add & Remove : First , Last , Middle
+ */
+
 public class G_AllOperationLinkedList {
     // class
     public static class Node {
