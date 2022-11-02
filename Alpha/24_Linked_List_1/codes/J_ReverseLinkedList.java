@@ -1,7 +1,7 @@
 /*
 * Question: 3: (Important Question & Classical Question)
 *           Reverse Liked List. ----------------> Key point: create new temporary linked list.
-* Time Complexity: O()
+* Time Complexity: O(n^2)
 * ------------------------------------------------------------
 * Example:  
 * H              T
@@ -68,7 +68,7 @@ public class J_ReverseLinkedList {
     }
 
     // reverse linked list
-    public void reverseLL(Node head) {
+    public void reverseLL() {
         Node prev = head;
         Node delPrev = prev;
 
@@ -142,7 +142,7 @@ public class J_ReverseLinkedList {
         ll.print();
 
         // reverse linked list
-        ll.reverseLL(head);
+        ll.reverseLL();
 
         // set head & tail
         head = newHead;
@@ -153,5 +153,8 @@ public class J_ReverseLinkedList {
         ll.print();
 
         System.out.println("Head.data: "+head.data+"\tHead.next.data: "+head.next.data);
+    }
+
+    public void reverseLL(J_OptimiseReverseLinkedList.Node head2) {
     }
 }
