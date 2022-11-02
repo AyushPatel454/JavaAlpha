@@ -1,5 +1,5 @@
 /*
- * Reverse Linked List
+ * Reverse Linked List (Iterative Approach)
  * Time Complexity: O(n)
  */
 
