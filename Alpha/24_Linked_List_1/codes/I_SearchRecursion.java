@@ -9,7 +9,7 @@
 import java.util.Scanner;
 
 public class I_SearchRecursion {
-    public class Node {
+    public static class Node {
         int data;
         Node next;
         // Constructor

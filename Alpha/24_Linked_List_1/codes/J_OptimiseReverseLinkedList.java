@@ -4,7 +4,7 @@
  */
 
 public class J_OptimiseReverseLinkedList {
-    class Node{
+    public static class Node{
         int data;
         Node next;
         // constructor

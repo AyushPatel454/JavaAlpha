@@ -7,7 +7,7 @@
 import java.util.Scanner;
 
 public class H_SearchIterative {
-    public class Node {
+    public static class Node {
         int data;
         Node next;
         // Constructor

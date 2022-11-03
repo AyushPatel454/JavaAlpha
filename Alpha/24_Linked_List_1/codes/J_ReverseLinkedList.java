@@ -36,7 +36,7 @@
  */
 
 public class J_ReverseLinkedList {
-    class Node{
+    public static class Node{
         int data;
         Node next;
         // constructor

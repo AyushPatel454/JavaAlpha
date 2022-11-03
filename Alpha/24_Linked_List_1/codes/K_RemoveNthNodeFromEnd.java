@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class K_RemoveNthNodeFromEnd {
 
-    class Node{
+    public static class Node{
         int data;
         Node next;
         // constructor
