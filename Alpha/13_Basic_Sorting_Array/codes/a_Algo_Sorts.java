@@ -41,7 +41,7 @@ public class a_Algo_Sorts {
             int previous = i - 1;
 
             //finding out the correct position to insert
-            while(previous>=0 && arr[previous] > arr[current]) {
+            while(previous>=0 && arr[previous] > current) {
                 arr[previous+1] = arr[previous];
                 previous--;
             }
@@ -93,6 +93,7 @@ public class a_Algo_Sorts {
         // bubbleSort(arr);
         // selectionSort(arr);
         // insertionSort(arr);
+        // printArr(arr);
         
         // ===> Inbuilt sorting.
         Arrays.sort(arr);
@@ -107,10 +108,5 @@ public class a_Algo_Sorts {
         int countingsort[] = {1,4,1,3,2,4,3,7};
         countingSort(countingsort);
         printArr(countingsort);
-
-
-
-
-
     }
 }
