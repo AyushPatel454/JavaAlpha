@@ -53,7 +53,7 @@ public class C_QueueUsingLinkedList {
                 return -1;
             }
 
-            int front = tail.data;
+            int front = head.data;
 
             if(tail == head) {
                 tail = head = null;
@@ -83,7 +83,7 @@ public class C_QueueUsingLinkedList {
         q.add(2);
         q.add(3);
         q.add(4);
-        q.remove();
+        System.out.println("Remove head: "+q.remove());
         
         while(!q.isEmpty()) {
             System.out.println(q.peek());

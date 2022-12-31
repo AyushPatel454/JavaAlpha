@@ -1,3 +1,7 @@
+/*
+ * ===>Circular Queue using Array.
+ */
+
 public class B_CircularQueueArray {
     public static class Queues {
         static int arr[];
