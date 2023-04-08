@@ -3,6 +3,16 @@ import java.util.Stack;
 /* Company: Microsoft, Google.
  * Question: 2: Queue using 2 stack.
  * Method 1: PUSH - O(n) & Pop - O(1) 
+ * Explenation ---> Take 2 stack s1 & s2.
+ *             ---> use s1 as a queue at below method.
+ *             ---> (Add value in s1 stack in bottom.)
+ *             --->   i) Pop all ement of s1 and push in s2 stack.
+ *             --->  ii) Add new element in s1 stack. s1.push(element)
+ *             ---> iii) Pop all element of s2 and push in s1 stack.
+ * 
+ *             ---> For remove operation: Pop(TopElement.)
+ *             ---> For peek operation: Peek(TopElement.)
+ * 
  * Method 2: Pop - O(n)  & PUSH - O(1)
  * 
  * We use method 1
@@ -30,7 +40,7 @@ public class E_QueueUsingTwoStack {
             }
         }
 
-        // remove
+        // remove - O(1)
         public static int remove() {
             if(s1.isEmpty()) {
                 System.out.println("Queue is Empty...!!");
@@ -39,7 +49,7 @@ public class E_QueueUsingTwoStack {
             return s1.pop();
         }
 
-        // peek
+        // peek - O(1)
         public static int peek() {
             if(s1.isEmpty()) {
                 System.out.println("Queue is Empty...!!");
