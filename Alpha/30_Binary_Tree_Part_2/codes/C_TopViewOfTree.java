@@ -1,5 +1,10 @@
 /*
  * ===> Question: Top View Of Tree.
+ * 
+ * ---> Level Order Traversing concept is use. & Hash map.
+ * Solve using Hashmap. (In which we store unique HD as a key and it's value is Node (which Node HD))
+ * Horizontal Distance of Node.
+ * We need a class for storing information of Node & it's horizontal distance.
  */
 
 import java.util.*;
@@ -16,6 +21,7 @@ import java.util.*;
         }
     }
 
+    // Storing information of Node & it's horizontal distance.
     static class Info {
         Node node;
         int horizontalDistance;
@@ -32,8 +38,8 @@ import java.util.*;
         Queue<Info> q = new LinkedList<>();
         HashMap<Integer, Node> map = new HashMap<>();
 
-        int min = 0, max = 0;
-        q.add(new Info(root, 0));
+        int min = 0, max = 0; // Min --> For left sub tree whose Horizontal distance are -ve (negative) & // Max --> For right sub tree whose horizontal distance are +ve (positive)
+        q.add(new Info(root, 0)); // Root node & it's horizontal distace is alsways 0. (Because it's lies on origin)
         q.add(null);
 
         while(!q.isEmpty()) {
@@ -45,21 +51,27 @@ import java.util.*;
                     q.add(null);
                 }
             } else {
-                if(!map.containsKey(curr.horizontalDistance)) { // first time my hd is occurring
-                    map.put(curr.horizontalDistance, curr.node);
+                // First time hd is occuring.
+                if(!map.containsKey(curr.horizontalDistance)) { // containsdKey ---> Check given key is already exist or not. // ---> If it's return TRUE that's means key is exist. If FALSE key is not exist
+                    map.put(curr.horizontalDistance, curr.node); // key not exist. Then add in map usint ---> put
                 }
-    
+                
+                // Add current node's Left node if it's not null.
+                // it's current left's that's why it's horizontal distance = currentNodeHorizontalDistance - 1
                 if(curr.node.left != null) {
                     q.add(new Info(curr.node.left, curr.horizontalDistance - 1));
                     min = Math.min(min, curr.horizontalDistance - 1);
                 }
+
+                // Add current node's Right node if it's not null.
+                // it's current Right's that's why it's horizontal distance = currentNodeHorizontalDistance + 1
                 if(curr.node.right != null) {
                     q.add(new Info(curr.node.right, curr.horizontalDistance + 1));
                     max = Math.max(max, curr.horizontalDistance + 1);
                 }
             }
         }
-
+        // Printing nodes
         for(int i = min; i <= max; i++) {
             System.out.print(map.get(i).data+" ");
         }
