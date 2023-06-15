@@ -38,7 +38,6 @@
  * See notes...!!
  */
 
-import java.util.Arrays;
 
 public class C_CountBSTs {
     // ---> CountBSTs/Trees = Catalan Number
