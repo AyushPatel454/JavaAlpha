@@ -5,7 +5,7 @@ public class DecimalToBinary {
 
     public static int DecimalToBinary(int decNum) {
         int binNum = 0 , rem , power = 0;
-        while(decNum >= 1) {
+        while(decNum >   0) {
             rem = decNum % 2;
             binNum = binNum + (rem*(int)Math.pow(10, power));
             power++;
